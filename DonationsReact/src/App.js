@@ -7,6 +7,11 @@ import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
 import CollectionType from './panels/CollectionType';
+import CollectionSettings from './panels/CollectionSettings';
+import CollectionAdditionalInfo from './panels/CollectionAdditionalInfo'
+import Posting from './panels/Posting'
+import NewsFeed from './panels/NewsFeed'
+import Collection from './panels/Collection'
 import Persik from './panels/Persik';
 
 const App = () => {
@@ -38,6 +43,11 @@ const App = () => {
 		<Switch>
 			<Route exact path='/' component={Home}/>
 			<Route path='/type' component={CollectionType}/>
+			<Route path='/settings' component={CollectionSettings}/>
+			<Route path='/additionalInfo' component={CollectionAdditionalInfo}/>
+			<Route path='/post' component={Posting}/>
+			<Route path='/feed' component={NewsFeed}/>
+			<Route path='/collection' component={Collection}/>
 		</Switch>
 
 
