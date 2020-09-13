@@ -1,0 +1,24 @@
+.content {
+  max-height: 196px;
+  padding: 48px 32px;
+  margin-top: calc(50vh - 196px);
+  display: flex;
+  flex-direction: column;
+  position: static;
+}
+
+.textContent {
+  max-height: 44px;
+  margin-left: 32px;
+  margin-right: 32px;
+  text-align: center;
+}
+
+#textHeadline {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  color: #818C99;
+  margin-top: 2px;
+}
