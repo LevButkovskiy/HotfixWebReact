@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import { Switch, Route } from 'react-router-dom'
 import bridge from '@vkontakte/vk-bridge';
-import View from '@vkontakte/vkui/dist/components/View/View';
+import { Root, View } from '@vkontakte/vkui';
 import ScreenSpinner from '@vkontakte/vkui/dist/components/ScreenSpinner/ScreenSpinner';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import Home from './panels/Home';
+import CollectionType from './panels/CollectionType';
 import Persik from './panels/Persik';
 
 const App = () => {
@@ -33,12 +35,14 @@ const App = () => {
 	};
 
 	return (
-		<View activePanel={activePanel} popout={popout}>
-			<Home id='home' fetchedUser={fetchedUser} go={go} />
-			<Persik id='persik' go={go} />
-		</View>
+		<Switch>
+			<Route exact path='/' component={Home}/>
+			<Route path='/type' component={CollectionType}/>
+		</Switch>
+
+
+
 	);
 }
 
 export default App;
-
